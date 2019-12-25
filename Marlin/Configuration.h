@@ -163,7 +163,7 @@
  *
  * :[3, 4, 5, 6]
  */
-//#define LINEAR_AXES 3
+#define LINEAR_AXES 3
 
 /**
  * Axis codes for additional axes:
@@ -579,9 +579,9 @@
     #define DEFAULT_Ki_LIST {  1.28,   1.08 }
     #define DEFAULT_Kd_LIST { 56.51,  62.11 }
   #else
-  #define DEFAULT_Kp 17.03
-  #define DEFAULT_Ki 1.28
-  #define DEFAULT_Kd 56.51
+    #define DEFAULT_Kp 17.03
+    #define DEFAULT_Ki 1.28
+    #define DEFAULT_Kd 56.51
   #endif
 #endif // PIDTEMP
 
@@ -773,7 +773,7 @@
   //#define ENDSTOPPULLUP_JMAX
   //#define ENDSTOPPULLUP_KMAX
   //#define ENDSTOPPULLUP_XMIN
-  //#define ENDSTOPPULLUP_YMIN
+  #define ENDSTOPPULLUP_YMIN
   //#define ENDSTOPPULLUP_ZMIN
   //#define ENDSTOPPULLUP_IMIN
   //#define ENDSTOPPULLUP_JMIN
@@ -1798,7 +1798,7 @@
  *   M502 - Revert settings to "factory" defaults. (Follow with M500 to init the EEPROM.)
  */
 #define EEPROM_SETTINGS       // Persistent storage with M500 and M501
-//#define DISABLE_M503          // Saves ~2700 bytes of PROGMEM. Disable for release!
+#define DISABLE_M503          // Saves ~2700 bytes of PROGMEM. Disable for release!
 #define EEPROM_CHITCHAT       // Give feedback on EEPROM commands. Disable to save PROGMEM.
 #define EEPROM_BOOT_SILENT    // Keep M503 quiet and only give errors during first load
 #if ENABLED(EEPROM_SETTINGS)

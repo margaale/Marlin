@@ -773,7 +773,7 @@
   //#define ENDSTOPPULLUP_JMAX
   //#define ENDSTOPPULLUP_KMAX
   //#define ENDSTOPPULLUP_XMIN
-  #define ENDSTOPPULLUP_YMIN
+  //#define ENDSTOPPULLUP_YMIN
   //#define ENDSTOPPULLUP_ZMIN
   //#define ENDSTOPPULLUP_IMIN
   //#define ENDSTOPPULLUP_JMIN
@@ -1335,10 +1335,10 @@
 
 // The size of the printable area
 #define X_BED_SIZE 200
-#define Y_BED_SIZE 192
+#define Y_BED_SIZE 200
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS -2
+#define X_MIN_POS -5
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
 #define X_MAX_POS 200
@@ -1437,6 +1437,9 @@
   //#define FIL_RUNOUT6_STATE LOW
   //#define FIL_RUNOUT6_PULLUP
   //#define FIL_RUNOUT6_PULLDOWN
+
+  #define FIL_RUNOUT_PIN 57
+  #define FIL_RUNOUT2_PIN 58
 
   #define FIL_RUNOUT_PIN 57
   #define FIL_RUNOUT2_PIN 58

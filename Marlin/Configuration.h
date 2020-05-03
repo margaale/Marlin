@@ -773,7 +773,7 @@
   //#define ENDSTOPPULLUP_JMAX
   //#define ENDSTOPPULLUP_KMAX
   //#define ENDSTOPPULLUP_XMIN
-  #define ENDSTOPPULLUP_YMIN
+  //#define ENDSTOPPULLUP_YMIN
   //#define ENDSTOPPULLUP_ZMIN
   //#define ENDSTOPPULLUP_IMIN
   //#define ENDSTOPPULLUP_JMIN
@@ -1342,7 +1342,7 @@
 
 // The size of the printable area
 #define X_BED_SIZE 200
-#define Y_BED_SIZE 192
+#define Y_BED_SIZE 200
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS -5
@@ -1445,17 +1445,11 @@
   //#define FIL_RUNOUT6_PULLUP
   //#define FIL_RUNOUT6_PULLDOWN
 
-  //#define FIL_RUNOUT7_STATE LOW
-  //#define FIL_RUNOUT7_PULLUP
-  //#define FIL_RUNOUT7_PULLDOWN
+  #define FIL_RUNOUT_PIN 57
+  #define FIL_RUNOUT2_PIN 58
 
-  //#define FIL_RUNOUT8_STATE LOW
-  //#define FIL_RUNOUT8_PULLUP
-  //#define FIL_RUNOUT8_PULLDOWN
-
-  // Commands to execute on filament runout.
-  // With multiple runout sensors use the %c placeholder for the current tool in commands (e.g., "M600 T%c")
-  // NOTE: After 'M412 H1' the host handles filament runout and this script does not apply.
+  // Set one or more commands to execute on filament runout.
+  // (After 'M412 H' Marlin will ask the host to handle the process.)
   #define FILAMENT_RUNOUT_SCRIPT "M600"
 
   // After a runout is detected, continue printing this length of filament
